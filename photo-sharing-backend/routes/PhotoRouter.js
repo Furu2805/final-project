@@ -9,9 +9,9 @@ const path = require("path");
 const router = express.Router();
 
 //Config multer de upload anh
-const imagesDir = path.join(
+const imagesDir = path.resolve(
   __dirname,
-  "../../../photo-sharing/photo-sharing-v1/public/images"
+  "../../photo_sharing/photo-sharing-v1/public/images"
 );
 
 // Tạo thư mục nếu chưa tồn tại

@@ -64,7 +64,7 @@ const App = (props) => {
                 {/* route cần login */}
                 <Route
                   path="/users/:userId"
-                  element={currentUser ? <UserDetail currentUser={currentUser} /> : <Navigate to="/login" />}
+                  element={currentUser ? <UserDetail currentUser={currentUser} onLogout={handleLogout} /> : <Navigate to="/login" />}
                 />
                 <Route
                   path="/photos/:userId"

@@ -11,12 +11,12 @@ router.post("/register", async(req, res) => {
         first_name,
         last_name,
         location,
-        desscription,
+        description,
         occupation
     } = req.body
 
     if (!login_name || !password || !first_name || !last_name) {
-        res.status(400).json({
+        return res.status(400).json({
             message: 'Please provide all required fields!'
         })
     }
@@ -34,7 +34,7 @@ router.post("/register", async(req, res) => {
             first_name: first_name,
             last_name: last_name,
             location: location || ' ',
-            description: desscription || ' ',
+            description: description || ' ',
             occupation: occupation || ' '
         })
         await newUser.save()

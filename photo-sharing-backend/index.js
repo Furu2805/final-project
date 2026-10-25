@@ -11,6 +11,7 @@ const AuthRouter = require("./routes/AuthRouter");
 const RegisterRouter = require("./routes/RegisterRouter");
 const CommentRouter = require("./routes/CommentRouter");
 const requireLogin = require("./middleware/requireLogin");
+const isProduction = process.env.NODE_ENV === "production";
 
 dbConnect();
 
@@ -31,7 +32,7 @@ app.use(
 );
 app.options("*", cors());
 
-// 3) Session cookie: cross-site => SameSite=None + Secure=true (HTTPS)
+// 3) Use a local HTTP friendly cookie in development and a secure cookie in production.
 app.use(
   session({
     secret: process.env.SESSION_SECRET || "toanlm",
@@ -40,8 +41,8 @@ app.use(
     cookie: {
       maxAge: 24 * 60 * 60 * 1000,
       httpOnly: true,
-      sameSite: "none", // ✅ để cookie gửi qua XHR khác domain
-      secure: true,     // ✅ bắt buộc khi sameSite none (vì csb là https)
+      sameSite: isProduction ? "none" : "lax",
+      secure: isProduction,
     },
   })
 );
