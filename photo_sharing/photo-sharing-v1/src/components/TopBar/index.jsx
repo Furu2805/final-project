@@ -34,7 +34,7 @@ function TopBar({ user, onLogout }) {
       <Toolbar style={{ justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
           <Typography variant="h5" color="inherit">
-            Do Tung's Photo Sharing App
+            Toan Luong's Photo Sharing App
           </Typography>
           {user && (
             <UploadPhoto

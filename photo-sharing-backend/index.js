@@ -34,7 +34,7 @@ app.options("*", cors());
 // 3) Session cookie: cross-site => SameSite=None + Secure=true (HTTPS)
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || "tungdc",
+    secret: process.env.SESSION_SECRET || "toanlm",
     resave: false,
     saveUninitialized: false,
     cookie: {
