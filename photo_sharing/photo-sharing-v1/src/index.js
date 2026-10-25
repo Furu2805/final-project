@@ -5,7 +5,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-axios.defaults.baseURL = "https://v6dqwz-8081.csb.app/";
+axios.defaults.baseURL =
+  process.env.REACT_APP_API_URL || "http://localhost:8081/";
 axios.defaults.withCredentials = true;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
