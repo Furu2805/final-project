@@ -1,0 +1,18 @@
+.comment-form {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.comment-form form {
+  width: 100%;
+}
+
+.comment-form .MuiTextField-root {
+  background-color: #fafafa;
+}
+
+.comment-form .MuiButton-root {
+  text-transform: none;
+  font-weight: 600;
+}

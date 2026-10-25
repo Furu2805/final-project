@@ -1,0 +1,26 @@
+.main-topbar-buffer {
+  margin-top: 70px;
+}
+
+.main-grid-item {
+  height: calc(100vh - 85px);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.main-grid-item::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-grid-item::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.main-grid-item::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.main-grid-item::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

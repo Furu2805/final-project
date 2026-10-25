@@ -1,0 +1,80 @@
+.user-photos-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.user-photos-container .MuiTypography-h5 {
+  color: #1976d2;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.user-photos-container .MuiCard-root {
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.user-photos-container .MuiCardMedia-root {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  background-color: #000;
+}
+
+.user-photos-container .MuiCardContent-root {
+  padding: 20px;
+}
+
+.photo-date {
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+}
+
+.comments-section {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.comments-section .MuiTypography-h6 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.comment-item {
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border-left: 3px solid #1976d2;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.comment-header a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.comment-header a:hover {
+  text-decoration: underline;
+}
+
+.comment-text {
+  color: #333;
+  line-height: 1.5;
+}
